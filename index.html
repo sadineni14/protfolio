@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jagadeesh — 3D Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- Progress Bar -->
+  <div id="progressBar"></div>
+
+  <!-- Floating Social Icons -->
+  <div class="social-sidebar">
+    <a href="https://www.linkedin.com/in/sadineni-jagadish-b453342a1/" target="_blank">🔗</a>
+    <a href="https://github.com/sadineni14" target="_blank">💻</a>
+    <a href="mailto:jagadeeshsadineni5@gmail.com">✉️</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">J<span class="dot">.</span></div>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#github">GitHub</a>
+      <a href="#timeline">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="resume-btn" href="Untitled Resume (1).pdf" target="_blank">Resume</a>
+    </nav>
+
+    <button id="toggleTheme" class="theme-toggle">🌗</button>
+  </header>
+
+  <!-- Main -->
+  <main id="main" class="scene">
+
+    <!-- HERO -->
+    <div class="layer layer-mid hero-content">
+
+  <div class="hero-left">
+    <h1 class="title">Hi, I'm <span>Jagadish</span></h1>
+
+    <!-- Typing Effect -->
+    <h2 class="typing-text"><span id="typed"></span></h2>
+
+    <p class="subtitle">CSBS • Vignan's University • Developer</p>
+
+    <a href="#projects" class="btn">See Projects</a>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-photo">
+      <img src="jagadish.jpg" alt="Jagadeesh">
+    </div>
+  </div>
+
+</div>
+
+    <!-- ABOUT -->
+    <section id="about" class="panel about reveal fade-up">
+      <div class="about-inner">
+        <h2>About Me</h2>
+        <p>
+          I’m a 3rd-year CSBS student at Vignan's University.  
+          I build modern web applications with advanced UI animations,  
+          full-stack systems (PHP, MySQL), and 3D interactive interfaces.
+        </p>
+
+        <ul class="skills">
+          <li>C / C++</li>
+          <li>PHP & MySQL</li>
+          <li>JavaScript</li>
+          <li>UI/UX Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="panel skills-section reveal fade-up">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-bars">
+
+        <div class="skill">
+          <span>C / C++</span>
+          <div class="bar"><div class="fill" data-level="85"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>PHP & MySQL</span>
+          <div class="bar"><div class="fill" data-level="90"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><div class="fill" data-level="80"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>UI / UX Design</span>
+          <div class="bar"><div class="fill" data-level="75"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="panel services-section reveal fade-up">
+      <h2 class="section-title">What I Do</h2>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <h3>Frontend Development</h3>
+          <p>Beautiful UIs, animations, 3D elements & modern interactions.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Backend Development</h3>
+          <p>PHP, MySQL, authentication, dashboards & secure systems.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Full Stack Projects</h3>
+          <p>Fuel Delivery, Hotel Management, Breakfast Website & more.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>UI / UX Design</h3>
+          <p>Clean layouts, responsive pages & interaction workflows.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="panel testimonials-section reveal fade-up">
+      <h2 class="section-title">Testimonials</h2>
+
+      <div class="testimonials-slider">
+
+        <div class="testimonial">
+          <p>"Jagadeesh builds amazing UI and clean backend logic."</p>
+          <h4>— Senior Developer</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>"Creative thinker with strong problem-solving skills."</p>
+          <h4>— Project Mentor</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>"Delivered the Fuel Delivery project on time with great quality."</p>
+          <h4>— Faculty</h4>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GITHUB SECTION -->
+    <section id="github" class="panel projects reveal fade-up">
+      <div class="gh-header">
+        <h2 class="section-title">My GitHub Repos</h2>
+        <button id="gh-toggle" class="gh-toggle">▼</button>
+      </div>
+
+      <div id="gh-wrapper">
+        <div id="gh-status" class="gh-status">Loading repositories…</div>
+        <div id="gh-grid" class="gh-grid"></div>
+
+        <div class="gh-controls">
+          <input id="gh-username" type="text" placeholder="GitHub username (e.g. jagadeesh)" />
+          <button id="gh-refresh">Fetch</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="panel timeline reveal fade-up">
+      <h2 class="section-title">My Journey</h2>
+
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>2023 — Started B.Tech CSBS</h3>
+        <p>Began my engineering journey at Vignan's University.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>2024 — Built Major Projects</h3>
+        <p>Fuel Delivery, Hotel Management, Breakfast Website.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>2025 — Leveling Up Skills</h3>
+        <p>Advanced UI/UX, animations, backend systems.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h3>Future Goals</h3>
+        <p>Become a top full-stack developer with 10+ LPA placement.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="panel projects reveal fade-up">
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="carousel" id="carousel">
+
+        <div class="slide">
+          <img src="fuel.jpeg" alt="Fuel Delivery">
+          <h3>Fuel Delivery</h3>
+          <p>Payments + Maps + Dashboard</p>
+        </div>
+
+        <div class="slide">
+          <img src="hotel.jpeg" alt="Hotel Management">
+          <h3>Hotel Management</h3>
+          <p>Rooms + Billing</p>
+        </div>
+
+        <div class="slide">
+          <img src="breakfast.jpeg" alt="Breakfast Hotel">
+          <h3>Breakfast Website</h3>
+          <p>Menu + PHP Backend</p>
+        </div>
+
+        <div class="slide">
+          <img src="student.jpeg" alt="Student Login">
+          <h3>Student Login</h3>
+          <p>Role-based Secure Login</p>
+        </div>
+
+      </div>
+
+      <div class="carousel-buttons">
+        <button id="prev">⟨</button>
+        <button id="next">⟩</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel contact reveal fade-up">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:jagadeeshsadineni5@gmail.com">jagadeeshsadineni5@gmail.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/jagadeesh</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      © <span id="year"></span> Jagadeesh — Made with ❤️
+    </footer>
+
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <img id="modalImage" src="" alt="Project Image">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+
+      <div class="modal-buttons">
+        <a id="modalDemo" href="#" target="_blank">Live Demo</a>
+        <a id="modalCode" href="#" target="_blank">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME MODAL -->
+  <div id="resumeModal" class="modal resume-modal">
+    <div class="modal-content resume-box">
+      <span class="resume-close">&times;</span>
+      <h2>My Resume</h2>
+
+      <iframe id="resumeFrame" src="Untitled Resume (1).pdf"></iframe>
+
+      <div class="resume-buttons">
+        <a href="Untitled Resume (1).pdf" download class="resume-download">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACKGROUND EFFECTS -->
+  <canvas id="particles"></canvas>
+  <div id="cursor-glow"></div>
+
+</body>
+</html>
+
